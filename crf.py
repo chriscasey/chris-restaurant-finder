@@ -7,6 +7,7 @@ BUSINESS_SEARCH_BASE_URL = 'https://api.yelp.com/v3/businesses/search'
 SEARCH_LOC = 'Berkeley, CA'
 PRICE = "1, 2, 3"
 CATEGORIES_ADVENTUROUS = 'categories-adventurous.txt'
+CATEGORIES_ALL = 'categories-all.txt'
 
 
 def find_restaurants(categories):
@@ -59,4 +60,5 @@ class YelpRestaurant:
 
 if __name__ == "__main__":
     categories = enrich_categories()
-    find_restaurants(categories)
+    restaurants = find_restaurants(categories)
+    print restaurants
